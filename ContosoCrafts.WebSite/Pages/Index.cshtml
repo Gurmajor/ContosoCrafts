@@ -8,7 +8,14 @@
     <h1 class="display-4">Contoso Crafts</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-@foreach(var product in Model.Products)
+<div class=" card-columns">
+@foreach (var product in Model.Products)
 {
-    <h2> @product.Title</h2>
+    <div class="card">
+        <div class="card-img" style="background-image: url('@product.Image');"></div>
+        <div class="card-body">
+            @product.Title
+        </div>
+         </div>
 }
+    </div>
